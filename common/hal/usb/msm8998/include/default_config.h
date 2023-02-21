@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Rockchip Electronics Co., Ltd.
+ * Copyright (c) 2022 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,23 +13,16 @@
  * limitations under the License.
  */
 
-#ifndef __MPP_SERVER_H__
-#define __MPP_SERVER_H__
-
-#include "mpp_device.h"
-
-#ifdef  __cplusplus
+#ifndef DEFAULT_CONFIG_H
+#define DEFAULT_CONFIG_H
+#ifdef __cplusplus
 extern "C" {
 #endif
 
-MPP_RET mpp_server_attach(MppDev ctx);
-MPP_RET mpp_server_detach(MppDev ctx);
+#define PORT_FILE_PATH "/data/usb/mode"
+#define UDC_NAME "fcc00000.dwc3"
 
-MPP_RET mpp_server_send_task(MppDev ctx);
-MPP_RET mpp_server_wait_task(MppDev ctx, RK_S64 timeout);
-
-#ifdef  __cplusplus
+#ifdef __cplusplus
 }
 #endif
-
-#endif /* __MPP_SERVER_H__ */
+#endif // DEFAULT_CONFIG_H
